@@ -26,10 +26,6 @@
   transition: 0.3s;
 }
 
-.nav a:hover {
-  /* color: rgb(203, 214, 233); */
-}
-
 .btn {
   /* position: absolute;
   bottom: 20%; */
@@ -52,10 +48,6 @@
 .btn:hover {
   color: white;
   background-color: rgb(255, 40, 104);
-}
-
-.nav h2 {
-  /* margin-left: 40px; */
 }
 
 .navLink {
