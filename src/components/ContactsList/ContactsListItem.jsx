@@ -5,11 +5,7 @@ export const ContactsListItem = ({ name, number, deleteContact, id }) => {
   return (
     <li className={styles.item}>
       <span>{name}: </span> <span>{number}</span>
-      <button
-        className={styles.deleteBtn}
-        type="button"
-        onClick={() => deleteContact(id)}
-      >
+      <button className={styles.deleteBtn} onClick={() => deleteContact(id)}>
         Delete
       </button>
     </li>
