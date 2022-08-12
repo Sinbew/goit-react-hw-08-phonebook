@@ -3,11 +3,11 @@
 // import { Filter } from './Filter/Filter';
 // import { ContactsList } from './ContactsList/ContactsList';
 
-import { Registration } from 'pages/Registration';
+import { Registration } from 'Pages/Registration';
 import { Navigation } from './Navigation/Navigation';
 import { Route, Routes } from 'react-router-dom';
-import { Login } from 'pages/Login';
-import { Contacts } from 'pages/Contacts';
+import { Login } from 'Pages/Login';
+import { Contacts } from 'Pages/Contacts';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { getCurrentUser } from 'redux/auth/auth-operations';
@@ -23,11 +23,6 @@ export const App = () => {
     dispatch(getCurrentUser());
   }, [dispatch, token]);
 
-  // useEffect(() => {
-  //   if (token) {
-  //     tokenAuth.set();
-  //   }
-  // }, [token]);
   return (
     <>
       <Navigation></Navigation>
