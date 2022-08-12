@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { signIn } from 'redux/auth/auth-operations';
 
-import styles from './Register.module.css';
+import styles from './Registration.module.css';
 
 export const Registration = () => {
   const [name, setName] = useState('');

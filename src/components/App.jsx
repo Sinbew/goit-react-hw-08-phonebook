@@ -3,7 +3,7 @@
 // import { Filter } from './Filter/Filter';
 // import { ContactsList } from './ContactsList/ContactsList';
 
-import { Registration } from 'pages/Register';
+import { Registration } from 'pages/Registration';
 import { Navigation } from './Navigation/Navigation';
 import { Route, Routes } from 'react-router-dom';
 import { Login } from 'pages/Login';
