@@ -4,15 +4,16 @@ import { useSelector } from 'react-redux';
 import { Filter } from 'components/Filter/Filter';
 import { ContactsList } from 'components/ContactsList/ContactsList';
 import { getIsLogged } from 'redux/auth/auth-selectors';
-import { useNavigate } from 'react-router-dom';
+
+import styles from './Contacts.module.css';
+
 export const Contacts = () => {
   const loading = useSelector(state => state.contacts.pending);
   const isLogged = useSelector(getIsLogged);
-  console.log(isLogged);
-  const navigate = useNavigate();
+
   return (
     <>
-      <div>
+      <div className={styles.wrapper}>
         {loading && (
           <ThreeDots
             height="80"
@@ -28,26 +29,11 @@ export const Contacts = () => {
             visible={true}
           />
         )}
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            flexWrap: 'wrap',
-          }}
-        >
+        <div className={styles.innerWrapperForm}>
           <Form />
         </div>
 
-        <div
-          style={{
-            marginTop: '50px',
-            backgroundColor: '#e5e5e5',
-
-            width: '30%',
-            marginLeft: 'auto',
-            marginRight: 'auto',
-          }}
-        >
+        <div className={styles.innerWrapperContacts}>
           <Filter />
 
           {isLogged && <ContactsList />}

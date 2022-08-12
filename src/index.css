@@ -14,6 +14,10 @@ code {
     monospace;
 }
 
+#root {
+  display: flex;
+}
+
 section {
   padding-top: 20px;
   display: flex;
@@ -36,15 +40,9 @@ section {
   transform: translate(-50%);
 }
 
-.nav-container {
-  width: 100%;
-  background-color: rgb(225, 226, 135);
-  padding: 40px 0;
-}
-
 a {
   text-decoration: none;
-  color: black;
+
   font-weight: 600;
   padding: 10px 20px;
 }

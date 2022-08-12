@@ -1,33 +1,49 @@
-import { Registration } from 'pages/register';
+import { UserMenu } from 'components/UserMenu/UserMenu';
 import { useDispatch, useSelector } from 'react-redux';
-import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { logOut } from 'redux/auth/auth-operations';
 import { getIsLogged } from 'redux/auth/auth-selectors';
+
+import styles from './Navigation.module.css';
 export const Navigation = () => {
   const isLogged = useSelector(getIsLogged);
 
-  const location = useLocation();
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handleLogOut = () => {
-    dispatch(logOut())
-      .unwrap()
-      .then(data => console.log(data));
-
-    // if (!isLogged) {
-    //   navigate('/login'); // ????????????????????????????????????????????????????????????????????????????????????????????????????
-    //   return;
-    // }
+    dispatch(logOut()).unwrap();
   };
 
   return (
-    <div className="nav-container">
-      <nav className="nav">
-        {!isLogged && <NavLink to="/">Sign In</NavLink>}
-        {!isLogged && <NavLink to="/login">Log In</NavLink>}
-        {isLogged && <NavLink to="/contacts">Contacts</NavLink>}
-        {isLogged && <button onClick={handleLogOut}>Log Out</button>}
+    <div className={styles.navContainer}>
+      <nav className={styles.nav}>
+        {!isLogged && (
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? styles.activeNavLink : styles.navLink
+            }
+            to="/"
+          >
+            Sign In
+          </NavLink>
+        )}
+        {!isLogged && (
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? styles.activeNavLink : styles.navLink
+            }
+            to="/login"
+          >
+            Log In
+          </NavLink>
+        )}
+        {/* {isLogged ? <p>Here's your contacts</p> : <></>} */}
+        {isLogged && <UserMenu />}
+        {isLogged && (
+          <button className={styles.btn} onClick={handleLogOut}>
+            Log Out
+          </button>
+        )}
       </nav>
     </div>
   );

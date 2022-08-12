@@ -4,7 +4,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/Contacts/contacts-operations';
 import { useEffect } from 'react';
 import { getContacts } from 'redux/Contacts/contacts-operations';
-import { getCurrentUser } from 'redux/auth/auth-operations';
 
 export const ContactsList = () => {
   const contacts = useSelector(state => state.contacts.items);
@@ -13,7 +12,6 @@ export const ContactsList = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // dispatch(getCurrentUser());
     dispatch(getContacts());
   }, [dispatch]);
 

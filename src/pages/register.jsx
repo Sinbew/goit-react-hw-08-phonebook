@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { signIn } from 'redux/auth/auth-operations';
 
+import styles from './Register.module.css';
+
 export const Registration = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -34,7 +36,7 @@ export const Registration = () => {
   };
 
   return (
-    <div>
+    <div className={styles.wrapperFormRegister}>
       <form onSubmit={handleSubmit}>
         <input
           onChange={handleChange}
