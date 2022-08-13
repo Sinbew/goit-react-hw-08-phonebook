@@ -14,6 +14,7 @@ import { getCurrentUser } from 'redux/auth/auth-operations';
 import { getToken } from 'redux/auth/auth-selectors';
 import { PrivateRoute } from './PrivateRoute/PrivateRoute';
 import { PublicRoute } from './PublicRoute/PublicRoute';
+import { NotFound } from 'pages/NoFound';
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -51,6 +52,7 @@ export const App = () => {
             </PrivateRoute>
           }
         ></Route>
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </>
   );

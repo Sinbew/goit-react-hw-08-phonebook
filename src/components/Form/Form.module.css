@@ -1,8 +1,8 @@
 form {
-  border: 5px solid rgb(238, 240, 241);
+  /* border: 2px solid rgb(170, 171, 185); */
   padding: 20px 20px 50px 20px;
   width: 50%;
-  border-radius: 5px;
+  border-radius: 20px;
 
   display: flex;
   flex-direction: column;
@@ -13,7 +13,30 @@ form {
 .formInput {
   display: block;
   width: 300px;
-  padding: 5px 5px;
+  padding: 15px 0 15px 5px;
+  border-radius: 5px;
+
+  background-color: rgba(255, 255, 255, 0.39);
+
+  transition: 0.3s;
+  border: none;
+}
+
+.formInput:focus {
+  outline: 1px solid royalblue;
+  border: none;
+}
+
+.formInput::placeholder {
+  padding: 20px 5px;
+}
+
+.formInput:focus::placeholder {
+  color: transparent;
+}
+
+.formInput:nth-child(2) {
+  margin-top: 20px;
 }
 
 .formLabel {
@@ -30,7 +53,7 @@ form {
   display: block;
   width: 300px;
 
-  background-color: #5536e8;
+  background-color: royalblue;
   color: #fff;
 
   font-weight: 700;
@@ -42,5 +65,5 @@ form {
 }
 
 .btn:hover {
-  background-color: #3d27ad;
+  background-color: #4828ff;
 }

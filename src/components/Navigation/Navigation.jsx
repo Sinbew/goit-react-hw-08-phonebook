@@ -4,6 +4,8 @@ import { NavLink } from 'react-router-dom';
 import { logOut } from 'redux/auth/auth-operations';
 import { getIsLogged } from 'redux/auth/auth-selectors';
 
+import png from '../../images/main.png';
+
 import styles from './Navigation.module.css';
 export const Navigation = () => {
   const isLogged = useSelector(getIsLogged);
@@ -16,6 +18,10 @@ export const Navigation = () => {
 
   return (
     <div className={styles.navContainer}>
+      {/* <svg className={styles.svg} width="70" height="70">
+        <use href={svg}></use>
+      </svg> */}
+      {isLogged && <img className={styles.png} src={png} alt="1" />}
       <nav className={styles.nav}>
         {!isLogged && (
           <NavLink

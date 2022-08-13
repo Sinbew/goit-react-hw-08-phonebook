@@ -6,14 +6,22 @@ import { ContactsList } from 'components/ContactsList/ContactsList';
 import { getIsLogged } from 'redux/auth/auth-selectors';
 
 import styles from './Contacts.module.css';
+// import { useSearchParams } from 'react-router-dom';
 
 export const Contacts = () => {
   const loading = useSelector(state => state.contacts.pending);
   const isLogged = useSelector(getIsLogged);
 
+  // const [queryParams, setQueryParams] = useSearchParams();
+
+  // // const query = queryParams.get();
+
+  // console.log(queryParams);
+
   return (
     <>
       <div className={styles.wrapper}>
+        <span className={styles.span}>Add contact</span>
         {loading && (
           <ThreeDots
             height="80"

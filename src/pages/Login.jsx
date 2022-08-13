@@ -4,6 +4,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { logIn } from 'redux/auth/auth-operations';
 import { getIsLogged } from 'redux/auth/auth-selectors';
 import { Contacts } from './Contacts';
+import Icon from '@mdi/react';
+import { mdiBook } from '@mdi/js';
+import { TextField } from '@mui/material';
 
 import styles from './Login.module.css';
 
@@ -45,14 +48,33 @@ export const Login = () => {
     <>
       {!isLogged ? (
         <div className={styles.wrapperLogin}>
+          <h1 className={styles.title}>Phonebook</h1>
+          {/* <h2 className={styles.titleBackground}>Phonebook</h2> */}
+          <Icon
+            className={styles.titleBackground}
+            path={mdiBook}
+            title="User Profile"
+            size={30}
+            color="black"
+          />
+
           <form onSubmit={handleLoginSubmit}>
-            <input
+            <TextField
+              sx={{
+                marginBottom: '10px',
+              }}
+              id="standard-basic"
+              label="Email"
+              variant="standard"
               onChange={handleChange}
               name="email"
               placeholder="Enter your email"
               type="email"
             />
-            <input
+            <TextField
+              id="standard-basic"
+              label="Password"
+              variant="standard"
               onChange={handleChange}
               name="password"
               placeholder="Enter your password"

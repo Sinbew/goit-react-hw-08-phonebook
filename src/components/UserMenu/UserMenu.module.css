@@ -4,6 +4,7 @@
   border-radius: 50%;
   background-color: royalblue;
   color: white;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,7 +21,7 @@
 }
 
 .wrapper:hover {
-  background-color: rgb(255, 40, 104);
+  background-color: #4828ff;
 }
 
 .wrapper:hover span {
@@ -33,12 +34,13 @@
   writing-mode: vertical-lr;
   transform: rotate(180deg);
   right: 0;
-  font-size: 150px;
+  font-size: 130px;
   margin: 0;
   padding: 0;
   z-index: 0;
   cursor: default;
-  color: rgb(172, 176, 230);
+  color: #b0b2c9;
+
   opacity: 0.2;
   /* filter: blur(0.1rem); */
 }
@@ -50,5 +52,5 @@
 }
 
 .infoWrapper h2 {
-  color: #f0f0f0;
+  color: #353535;
 }

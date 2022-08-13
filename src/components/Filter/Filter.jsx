@@ -1,7 +1,7 @@
 import styles from './Filter.module.css';
 
 import { useDispatch, useSelector } from 'react-redux';
-
+import { TextField } from '@mui/material';
 import { filterContacts } from 'redux/Contacts/contacts-actions';
 export const Filter = () => {
   const name = useSelector(state => state.contacts.filter);
@@ -16,6 +16,7 @@ export const Filter = () => {
       Find contacts by name or phone-number
       <input
         className={styles.filterInput}
+        placeholder="Search"
         type="text"
         name="filter"
         value={name}

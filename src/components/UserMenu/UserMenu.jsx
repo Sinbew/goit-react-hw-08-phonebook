@@ -11,7 +11,7 @@ export const UserMenu = () => {
           <span>{user[0]}</span>
         </div>
         <h2>
-          Hello, <br /> {user}!
+          Greetings, <br /> {user}!
         </h2>
       </div>
       <h3 className={styles.user}>{user}</h3>

@@ -1,13 +1,23 @@
 .navContainer {
-  background: rgb(236, 238, 241);
-  background-color: rgb(83, 51, 228);
+  background: #6a75c2;
+  /* background-color: rgb(83, 51, 228); */
   padding: 0px 20px 0px 40px;
   overflow: hidden;
   position: relative;
   z-index: 200;
 
+  /* background: linear-gradient(
+    to right,
+    rgba(87, 101, 255, 0.4),
+    rgba(102, 36, 255, 0.6)
+  ); */
+
+  background-image: linear-gradient(to bottom, #dfe9f3 0%, white 100%);
+
   width: 30%;
-  height: 100vh;
+  height: 95vh;
+  box-shadow: 5px 5px 12px -1px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
 }
 
 .nav {
@@ -30,9 +40,9 @@
   /* position: absolute;
   bottom: 20%; */
   padding: 10px 30px;
-  width: 50%;
+  width: 30%;
   color: rgb(255, 255, 255);
-  background-color: rgb(121, 123, 241);
+  background-color: royalblue;
   border: none;
   border-radius: 5px;
 
@@ -47,7 +57,7 @@
 
 .btn:hover {
   color: white;
-  background-color: rgb(255, 40, 104);
+  background-color: #4828ff;
 }
 
 .navLink {
@@ -58,4 +68,14 @@
   color: rgb(255, 40, 104);
 
   transform: scale(1.05);
+}
+
+.png {
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+  width: 150%;
+
+  opacity: 0.07;
+  filter: saturate(0);
 }

@@ -5,7 +5,7 @@
 
   padding: 4px 15px;
 
-  background-color: rgb(235, 235, 235);
+  background-color: rgba(221, 224, 231, 0.336);
 
   cursor: pointer;
   border-radius: 2px;
@@ -14,7 +14,7 @@
 }
 
 .deleteBtn:hover {
-  background-color: #5536e8;
+  background-color: royalblue;
   color: #fff;
 }
 
