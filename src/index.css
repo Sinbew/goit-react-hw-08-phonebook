@@ -14,6 +14,16 @@ code {
     monospace;
 }
 
+body {
+  /* background: linear-gradient(to bottom right, #c2cbdd, #e4e4e4); */
+
+  background-image: linear-gradient(
+    to bottom right,
+    #dfe9f3 50%,
+    rgb(245, 245, 245) 100%
+  );
+}
+
 #root {
   display: flex;
   gap: 20px;

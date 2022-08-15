@@ -9,12 +9,13 @@ import { Route, Routes } from 'react-router-dom';
 import { Login } from 'pages/Login';
 import { Contacts } from 'pages/Contacts';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { getCurrentUser } from 'redux/auth/auth-operations';
 import { getToken } from 'redux/auth/auth-selectors';
 import { PrivateRoute } from './PrivateRoute/PrivateRoute';
 import { PublicRoute } from './PublicRoute/PublicRoute';
 import { NotFound } from 'pages/NoFound';
+import { Appear } from './Appear/Appear';
 
 export const App = () => {
   const dispatch = useDispatch();

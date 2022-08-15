@@ -18,6 +18,8 @@
   height: 95vh;
   box-shadow: 5px 5px 12px -1px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
+  /* background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(100px); */
 }
 
 .nav {
@@ -39,10 +41,10 @@
 .btn {
   /* position: absolute;
   bottom: 20%; */
-  padding: 10px 30px;
-  width: 30%;
+  padding: 10px 10px;
+  width: 100px;
   color: rgb(255, 255, 255);
-  background-color: royalblue;
+  background-color: rgba(65, 105, 225, 0.349);
   border: none;
   border-radius: 5px;
 
@@ -61,11 +63,11 @@
 }
 
 .navLink {
-  color: rgb(255, 255, 255);
+  color: rgb(58, 58, 58);
 }
 
 .activeNavLink {
-  color: rgb(255, 40, 104);
+  color: royalblue;
 
   transform: scale(1.05);
 }

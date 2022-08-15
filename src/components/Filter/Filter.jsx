@@ -13,7 +13,7 @@ export const Filter = () => {
 
   return (
     <label className={styles.filterLabel}>
-      Find contacts by name or phone-number
+      <span className={styles.span}>Find contacts by name or phone-number</span>
       <input
         className={styles.filterInput}
         placeholder="Search"

@@ -1,8 +1,11 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { signIn } from 'redux/auth/auth-operations';
-
+import { TextField } from '@mui/material';
 import styles from './Registration.module.css';
+
+import Icon from '@mdi/react';
+import { mdiBook } from '@mdi/js';
 
 export const Registration = () => {
   const [name, setName] = useState('');
@@ -37,20 +40,45 @@ export const Registration = () => {
 
   return (
     <div className={styles.wrapperFormRegister}>
+      <Icon
+        className={styles.titleBackground}
+        path={mdiBook}
+        title="User Profile"
+        size={30}
+        color="black"
+      />
       <form onSubmit={handleSubmit}>
-        <input
+        <TextField
+          sx={{
+            marginBottom: '10px',
+          }}
+          id="standard-basic"
+          label="Name"
+          variant="standard"
           onChange={handleChange}
           name="name"
           placeholder="Enter your name"
           type="text"
         />
-        <input
+        <TextField
+          sx={{
+            marginBottom: '10px',
+          }}
+          id="standard-basic"
+          label="Email"
+          variant="standard"
           onChange={handleChange}
           name="email"
           placeholder="Enter your email"
           type="email"
         />
-        <input
+        <TextField
+          sx={{
+            marginBottom: '10px',
+          }}
+          id="standard-basic"
+          label="Password"
+          variant="standard"
           onChange={handleChange}
           name="password"
           placeholder="Create a password"

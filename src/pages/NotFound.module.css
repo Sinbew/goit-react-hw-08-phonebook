@@ -14,9 +14,9 @@
 .error {
   position: absolute;
   bottom: 0;
-  left: 80%;
+  left: 50%;
 
-  transform: translate(80%);
+  transform: translate(100%);
   font-size: 100px;
 
   color: rgb(175, 175, 175);

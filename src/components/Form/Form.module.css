@@ -53,9 +53,11 @@ form {
   display: block;
   width: 300px;
 
-  background-color: royalblue;
-  color: #fff;
+  /* background-color: royalblue; */
 
+  /* border: 1px solid rgba(65, 105, 225, 0.336); */
+  color: white;
+  background-color: rgba(65, 105, 225, 0.301);
   font-weight: 700;
 
   cursor: pointer;
@@ -65,5 +67,5 @@ form {
 }
 
 .btn:hover {
-  background-color: #4828ff;
+  background-color: royalblue;
 }
